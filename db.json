@@ -1,0 +1,43 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "MacBook Pro",
+      "price": 900,
+      "year": 2023,
+      "image": "./assets/img/trailerflix.png",
+      "configure": {
+      "chip": "M2",
+      "SSD": "512 GB",
+      "memory": "16 GB",
+      "display": "Retina"
+      }
+    },
+    {
+        "id": 1,
+        "title": "MacBook Air",
+        "price": 700,
+        "year": 2019,
+        "image": "./assets/img/trailerflix.png",
+        "configure": {
+        "chip": "M1",
+        "SSD": "256 GB",
+        "memory": "16 GB",
+        "display": "Retina"
+        }
+      },
+      {
+        "id": 1,
+        "title": "MacBook Pro (Intel)",
+        "price": 1100,
+        "year": 2022,
+        "image": "./assets/img/trailerflix.png",
+        "configure": {
+        "chip": "Intel",
+        "SSD": "512 GB",
+        "memory": "32 GB",
+        "display": "Retina"
+        }
+      }
+  ]
+}
