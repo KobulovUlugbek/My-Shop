@@ -3,12 +3,12 @@
         <mat-card-title>{{ product.title }}</mat-card-title>
         <img class="image" mat-card-image src="{{ product.image }}">
         <mat-card-content>
-            <p> Price: {{ product.price }} $</p>
+            <p> Price: {{ product.price | currency: "EUR" }} </p>
             <p>Year: {{ product.year }}</p>
         </mat-card-content>
         <mat-card-actions>
             <button class="button" mat-flat-button color="primary">Basket</button>
-            <button class="button" mat-flat-button color="primary">Details</button>
+            <button class="button" mat-flat-button color="primary" [routerLink]="['/product', product.id]">Details</button>
         </mat-card-actions>
     </mat-card>
 </div>
