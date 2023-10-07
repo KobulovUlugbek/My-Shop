@@ -36,9 +36,10 @@
     </mat-form-field>
 
 
-    <button class="button" mat-flat-button style="margin-right: 5px;" color="primary" type="submit">Add Product</button>
+    <button class="button" mat-flat-button style="margin-right: 5px;" color="primary" type="submit">
+        {{isNew ? 'Add Product' : 'Update'}}</button>
 
-    <button class="button" mat-flat-button color="warn" (click)="onNoClick()">Cancel</button>
+    <button class="button" mat-flat-button color="warn" (click)="onNoClick()" type="button">Cancel</button>
 
 
 </form>
