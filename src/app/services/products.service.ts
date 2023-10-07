@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IProducts } from '../models/products';
+import { retry } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,11 @@ export class ProductsService {
     return this.http.get<IProducts>(`${this.url}/${id}`)
   }
 
-  postProduct(){
-    
+  postProduct(product: IProducts){
+    return this.http.post<IProducts>(this.url, product);
+  }
+
+  deleteProduct(id:number){
+    return this.http.delete<any>(`${this.url}/${id}`);
   }
 }

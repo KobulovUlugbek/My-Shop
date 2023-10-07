@@ -34,11 +34,25 @@ export class ProductsComponent implements OnInit {
     dialogConfig.disableClose = true;
 
     const dialogRef = this.dialog.open(DialogBoxComponent, dialogConfig);
+
+    dialogRef.afterClosed().subscribe((data) => this.postData(data));
   }
 
+  postData(data: IProducts){
+    this.ProductsService.postProduct(data).subscribe((data) => this.products.push(data));
+  }
 
   ngOnDestroy(){
     if(this.productsSubscription) this.productsSubscription.unsubscribe();
+  }
+
+  deleteItem(id:number){
+    this.ProductsService.deleteProduct(id).subscribe( () => this.products.find((item)=>{
+      if(id === item.id){
+        let index = this.products.findIndex( (data) => data.id === id)
+        this.products.splice(index, 1);
+      }
+    }) );
   }
 
 

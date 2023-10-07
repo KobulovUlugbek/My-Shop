@@ -29,3 +29,10 @@ mat-card-title {
 .example-spacer {
   flex: 1 1 auto;
 }
+mat-card-actions{
+  width: 100%;
+
+  button{
+    width: calc(33%);
+  }
+}

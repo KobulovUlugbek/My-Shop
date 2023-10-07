@@ -31,8 +31,23 @@ export class DialogBoxComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.myForm);
-    
+
+    this.data = {
+      title: this.myForm.value.title,
+      price: this.myForm.value.price,
+      year: this.myForm.value.year,
+      image: "./assets/img/trailerflix.png",
+
+      configure: {
+        chip: this.myForm.value.chip,
+        ssd: this.myForm.value.ssd,
+        memory: this.myForm.value.memory,
+        display: this.myForm.value.display
+      } 
+    };
+
+    this.dialogRef.close(this.data);
+
   }
 
   onNoClick(): void {
